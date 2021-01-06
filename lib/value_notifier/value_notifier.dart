@@ -1,4 +1,6 @@
+import 'package:dicas_e_macetes/value_notifier/value_notifier_controller.dart';
 import 'package:flutter/material.dart';
+import 'package:rx_notifier/rx_notifier.dart';
 
 class MyValueNotifier extends StatefulWidget {
   @override
@@ -6,13 +8,19 @@ class MyValueNotifier extends StatefulWidget {
 }
 
 class _MyValueNotifier extends State<MyValueNotifier> {
-  final counter = ValueNotifier<int>(0);
-  void incrementCounter() {
-    counter.value++;
-  }
+  final controller = MyValueNotifierController();
 
-  void reset() {
-    counter.value = 0;
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    rxObserver(
+      () {
+        print(controller.counter);
+      },
+      //filtros
+      filter: () => controller.counter != 3,
+    );
   }
 
   @override
@@ -23,23 +31,24 @@ class _MyValueNotifier extends State<MyValueNotifier> {
         height: 200,
         child: Column(
           children: [
-            ValueListenableBuilder(
-                valueListenable: counter,
-                builder: (context, value, child) {
-                  print("build ValueListenableBuilder");
+            RxBuilder(
+                //filtros
+                filter: () => controller.counter != 3,
+                builder: (_) {
+                  print("build RxBuilder");
                   return Text(
-                    "${counter.value}",
+                    "${controller.counter}",
                     style: TextStyle(fontSize: 40),
                   );
                 }),
             RaisedButton(
-              onPressed: incrementCounter,
+              onPressed: controller.increment,
               color: Colors.blue,
               elevation: 5,
               child: Icon(Icons.add),
             ),
             RaisedButton(
-              onPressed: reset,
+              onPressed: controller.reset,
               color: Colors.blue,
               elevation: 5,
               child: Icon(Icons.clear),
