@@ -1,4 +1,4 @@
-# dicas_e_macetes
+# Dicas e macetes
 
 >## Entre na pasta lib, la você encontrar os nomes das pastas dos respectivos assuntos
 <hr>
