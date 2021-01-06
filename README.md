@@ -2,7 +2,7 @@
 
 
 ><h1>ValueNotifier</h1>
-<p>Um novo jeito de gerenciar estado em flutter bem simples e pratico
+<p>Um jeito de gerenciar estado em flutter bem simples e pratico
 </p>
 <a href="https://api.flutter.dev/flutter/foundation/ValueNotifier-class.html">ValueNotifier</a>
 
