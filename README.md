@@ -1,8 +1,21 @@
 # Dicas e macetes
 
->## Entre na pasta lib, la você encontrar os nomes das pastas dos respectivos assuntos
+><a href="https://flutter.dev/docs/get-started/install/windows">flutter</a>
+
+<br>
+
 <hr>
 
+<br>
+
+>## Entre na pasta lib, la você encontrar os nomes das pastas dos respectivos assuntos
+
+<br>
+
+<hr>
+
+
+<br>
 
 ># ValueNotifier
 >### Um jeito de gerenciar estado em flutter bem simples e pratico
