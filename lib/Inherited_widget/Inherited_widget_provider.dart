@@ -12,7 +12,7 @@ class CounterContrroler extends InheritedWidget {
     return context.dependOnInheritedWidgetOfExactType<CounterContrroler>();
   }
 
-  increment() => counter.value++;
+  int increment() => counter.value++;
 
   int get value => counter.value;
 

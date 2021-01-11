@@ -8,17 +8,20 @@ class Home extends StatelessWidget {
     final controller = CounterContrroler.of(context);
     return Center(
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Container(
-            width: 200,
             child: ValueListenableBuilder(
               valueListenable: controller.counter,
               builder: (context, value, child) {
-                return Text(value);
+                return Text(value.toString());
               },
             ),
           ),
-          RaisedButton.icon(onPressed: null, icon: null, label: null)
+          RaisedButton(
+            onPressed: controller.increment,
+            child: Icon(Icons.add),
+          )
         ],
       ),
     );

@@ -24,4 +24,9 @@
 ><a href="https://pub.dev/packages/rx_notifier/install">rx_notifier</a><br>
 ><a href="https://stacksecrets.com/flutter/exploring-valuenotifier-in-flutter">Artigo sobre ValueNotifier</a>
 
+<br>
+
+># InheritedWidget
+><a href="https://api.flutter.dev/flutter/widgets/InheritedWidget-class.html">InheritedWidget</a>
+
 
