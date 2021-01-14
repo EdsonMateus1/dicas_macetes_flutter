@@ -12,5 +12,5 @@ AppState _reducer(AppState state, AppAction action) {
   if (action == AppAction.decrement) return AppState(value: state.value - 1);
 }
 
-final AppStore =
+final appStore =
     Store<AppAction, AppState>(initalSate: AppState(), reducer: _reducer);

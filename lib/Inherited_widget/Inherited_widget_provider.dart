@@ -19,7 +19,5 @@ class CounterContrroler extends InheritedWidget {
   @override
   bool updateShouldNotify(covariant InheritedWidget oldWidget) {
     return false;
-    // TODO: implement updateShouldNotify
-    throw UnimplementedError();
   }
 }
