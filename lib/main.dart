@@ -10,15 +10,6 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(),
-        body: CounterContrroler(child: Home()),
-        // floatingActionButton: FloatingActionButton(
-        //   onPressed: controller.increment,
-        //   child: Icon(Icons.plus_one),
-        // ),
-      ),
-    );
+    return MaterialApp(home: Home());
   }
 }
