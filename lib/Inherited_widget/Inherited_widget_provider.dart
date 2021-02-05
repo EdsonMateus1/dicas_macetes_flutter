@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 class CounterContrroler extends InheritedWidget {
   final counter = ValueNotifier<int>(0);
