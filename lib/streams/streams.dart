@@ -22,12 +22,12 @@ class _MyStreamsState extends State<MyStreams> {
       body: Center(
         child: StreamBuilder<ResultModal>(
           stream: controller.myStream,
-          builder: (BuildContext context, AsyncSnapshot<ResultModal> snapshot) {
+          builder: (context, snapshot) {
             if (snapshot.hasError) {
               return Text("erro");
             }
             if (!snapshot.hasData) {
-              return Text("carregando");
+              return CircularProgressIndicator();
             }
             return Text("${snapshot.data.title}");
           },

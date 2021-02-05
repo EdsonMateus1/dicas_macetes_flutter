@@ -11,6 +11,7 @@ class FutureContrroler {
       return resultModal;
     } catch (e) {
       print("addResult $e");
+      throw Exception("addResult $e");
     }
   }
 }
@@ -26,6 +27,7 @@ class StreamsContrroler {
       _streamController.sink.add(res);
     } catch (e) {
       print("iniciarFluxo $e");
+      throw Exception("iniciarFluxo $e");
     }
   }
 }

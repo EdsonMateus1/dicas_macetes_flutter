@@ -27,11 +27,15 @@ class _MyFuTures extends State<MyFuTures> {
               return Text("erro");
             }
             if (!snapshot.hasData) {
-              return Text("carregando");
+              return CircularProgressIndicator();
             }
             return Text("${snapshot.data.title}");
           },
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.add),
+        onPressed: futureContrroler.addResult,
       ),
     );
   }
