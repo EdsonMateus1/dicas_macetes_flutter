@@ -1,8 +1,5 @@
 {
   "editor.fontSize": 20,
   "window.zoomLevel": 1,
-  "code-runner.executorMap": {
-    "typescript": "clear && npx ts-node --files --transpile-only",
-  },
-  "liveServer.settings.port": 5501
+ 
 }
