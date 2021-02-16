@@ -24,13 +24,13 @@ class _PageBlocState extends State<PageBloc> {
     super.dispose();
   }
 
+  void _authenticate() {
+    final event = SignInEvent(email: "teste@email.com", passaword: "123");
+    bloc.add(event);
+  }
+
   @override
   Widget build(BuildContext context) {
-    void _authenticate() {
-      final event = SignInEvent(email: "teste@email.com", passaword: "123");
-      bloc.add(event);
-    }
-
     return Scaffold(
       appBar: AppBar(
         title: Text("bloc page"),
