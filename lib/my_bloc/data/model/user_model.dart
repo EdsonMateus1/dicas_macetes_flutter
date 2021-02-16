@@ -1,4 +1,4 @@
-import 'package:dicas_e_macetes/my_bloc/bloc/domain/entity/user.dart';
+import 'package:dicas_e_macetes/my_bloc/domain/entity/user.dart';
 
 class UserModel extends User {
   final String name;

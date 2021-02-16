@@ -1,5 +1,5 @@
-import 'package:dicas_e_macetes/my_bloc/bloc/data/datasource/authenticate_datasource.dart';
-import 'package:dicas_e_macetes/my_bloc/bloc/data/model/user_model.dart';
+import 'package:dicas_e_macetes/my_bloc/data/datasource/authenticate_datasource.dart';
+import 'package:dicas_e_macetes/my_bloc/data/model/user_model.dart';
 
 class AuthenticateDatasourceImpl implements IAuthenticateDatasource {
   @override

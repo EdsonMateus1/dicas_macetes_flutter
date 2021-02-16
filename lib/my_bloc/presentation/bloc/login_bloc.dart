@@ -1,11 +1,9 @@
 import 'dart:async';
-
 import 'package:bloc/bloc.dart';
-import 'package:dicas_e_macetes/my_bloc/bloc/data/repositories/authenticate_repository_impl.dart';
-import 'package:dicas_e_macetes/my_bloc/bloc/domain/interfaces_repositories/authenticate_repository.dart';
-import 'package:dicas_e_macetes/my_bloc/bloc/domain/usercase/authenticate.dart';
-import 'package:dicas_e_macetes/my_bloc/bloc/external/auth_service.dart';
-import 'package:dicas_e_macetes/my_bloc/bloc/domain/entity/user.dart';
+import 'package:dicas_e_macetes/my_bloc/data/repositories/authenticate_repository_impl.dart';
+import 'package:dicas_e_macetes/my_bloc/domain/entity/user.dart';
+import 'package:dicas_e_macetes/my_bloc/domain/usercase/authenticate.dart';
+import 'package:dicas_e_macetes/my_bloc/external/auth_service.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter/widgets.dart';
 

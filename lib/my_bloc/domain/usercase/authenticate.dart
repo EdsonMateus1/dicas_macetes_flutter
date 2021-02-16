@@ -1,5 +1,5 @@
-import 'package:dicas_e_macetes/my_bloc/bloc/domain/entity/user.dart';
-import 'package:dicas_e_macetes/my_bloc/bloc/domain/interfaces_repositories/authenticate_repository.dart';
+import 'package:dicas_e_macetes/my_bloc/domain/entity/user.dart';
+import 'package:dicas_e_macetes/my_bloc/domain/interfaces_repositories/authenticate_repository.dart';
 import 'package:flutter/foundation.dart';
 
 abstract class IAuthenticate {

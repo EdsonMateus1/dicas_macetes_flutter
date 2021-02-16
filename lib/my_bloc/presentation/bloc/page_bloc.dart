@@ -1,4 +1,4 @@
-import 'package:dicas_e_macetes/my_bloc/bloc/login_bloc.dart';
+import 'package:dicas_e_macetes/my_bloc/presentation/bloc/login_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
