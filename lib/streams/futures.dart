@@ -14,7 +14,7 @@ class MyFuTures extends StatelessWidget {
       ),
       body: Center(
         child: FutureBuilder<List<ResultModal>>(
-          future: futureContrroler.addResult(),
+          future: futureContrroler.getResult,
           builder: (context, snapshot) {
             if (snapshot.hasError) {
               return Text("erro");
@@ -24,16 +24,26 @@ class MyFuTures extends StatelessWidget {
             }
             return ListView.builder(
               itemCount: snapshot.data.length,
-              itemBuilder: (context, i) {
-                return Text("${snapshot.data[i].title}");
-              },
+              itemBuilder: (context, i) => Card(
+                child: ListTile(
+                  leading: Text(
+                    "${snapshot.data[i].userId}",
+                  ),
+                  title: Text(
+                    "${snapshot.data[i].title}",
+                  ),
+                  trailing: Text(
+                    "${snapshot.data[i].id}",
+                  ),
+                ),
+              ),
             );
           },
         ),
       ),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
-        onPressed: futureContrroler.addResult,
+        onPressed: () => futureContrroler.getResult,
       ),
     );
   }

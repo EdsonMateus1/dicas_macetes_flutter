@@ -4,7 +4,7 @@ import 'package:dicas_e_macetes/streams/result_modal.dart';
 import 'package:http/http.dart' as http;
 
 class FutureContrroler {
-  Future<List<ResultModal>> addResult() async {
+  Future<List<ResultModal>> get getResult async {
     try {
       final String url = "https://jsonplaceholder.typicode.com/todos/";
       final result = await http.get(url);
@@ -28,10 +28,18 @@ class StreamsContrroler {
 
   void iniciarFluxo() async {
     try {
-      List<ResultModal> resultModals = await _futureContrroler.addResult();
+      List<ResultModal> resultModals = await _futureContrroler.getResult;
       _streamController.sink.add(resultModals);
     } catch (e) {
-      print("iniciarFluxo $e");
+      throw Exception("iniciarFluxo $e");
+    }
+  }
+
+  Stream<List<ResultModal>> get iniciarStream async* {
+    try {
+      List<ResultModal> resultModals = await _futureContrroler.getResult;
+      yield resultModals;
+    } catch (e) {
       throw Exception("iniciarFluxo $e");
     }
   }
