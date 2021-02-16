@@ -1,9 +1,8 @@
-import 'package:dicas_e_macetes/Inherited_widget/Inherited_widget_provider.dart';
-import 'package:dicas_e_macetes/Inherited_widget/home.dart';
-import 'package:dicas_e_macetes/streams/futures.dart';
-import 'package:dicas_e_macetes/streams/streams.dart';
-//import 'package:dicas_e_macetes/value_notifier/value_notifier.dart';
+import 'package:dicas_e_macetes/my_bloc/page_bloc.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+
+import 'my_bloc/bloc/login_bloc.dart';
 
 void main() {
   runApp(MyApp());
@@ -12,6 +11,12 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: MyStreams());
+    return MaterialApp(
+        home: Container(
+      child: BlocProvider<LoginBloc>(
+        create: (context) => LoginBloc(),
+        child: PageBloc(),
+      ),
+    ));
   }
 }
